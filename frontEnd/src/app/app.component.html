@@ -1,0 +1,17 @@
+{{ test | json }}
+
+<form (submit)="formSubmit()">
+  <input type="text" name="user" [(ngModel)]="user.name">
+  <input type="submit" value="Add User">
+</form>
+
+{{users | json}}
+
+<p *ngFor="let person of users">
+  {{person.name}} 
+  <button (click)="deleteUser(person._id)">Delete</button>
+</p>
+
+
+
+<!-- <router-outlet></router-outlet> -->
